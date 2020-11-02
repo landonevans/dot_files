@@ -37,5 +37,8 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
+" Vim-SLIME settings
+let g:slime_target = "tmux"
+
 " You can't stop me
 cmap w!! w !sudo tee %

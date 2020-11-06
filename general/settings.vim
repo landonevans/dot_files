@@ -1,5 +1,7 @@
 " set leader key
 let g:mapleader = "\<Space>"
+let g:python3_host_prog = '/Users/landonevans/neovim/venv/bin/python'
+
 
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
@@ -39,6 +41,7 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 
 " Vim-SLIME settings
 let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.2"}
 
 " You can't stop me
 cmap w!! w !sudo tee %
